@@ -1,0 +1,16 @@
+{'ProductName': 'TH_CAT_20120308245155_1_2P_S1742913_R63464_29NOV2020', 
+    'SATID': 'TH1', 
+    'Mode': 'PAN', 'Level': '2A', 'Status': 'PASS', 'FailedQC': [], 'QCProcessingTime(sec)': 6.734, 'QC1LostLine': {'QC1Status': 'PASS', 'AmountLostline': 0, 'LostlineNo.': []
+    }, 'QC2IncidenceAngle': {'QC2Status': 'PASS', 'VIEWING_ANGLE_ALONG_TRACK': -0.812874, 'VIEWING_ANGLE_ACROSS_TRACK': 11.909087
+    }, 'QC3ProductCompletion': {'QC3Status': 'PASS', 'MissingFile': [], 'ErrorFile': []
+    }, 'QC4NoData': {'QC4Status': 'PASS', 'NoDataPixelPercentage': [
+            2.5619047764782743e-05
+        ]
+    }, 'QC5CloudCoverage': {'QC5Status': 'PASS', 'CloudCoverPercentage': 9999
+    }, 'QC6CPFCheck': {'QC6Status': 'PASS', 'UsedCPF': 'THEOS_1_20200929_000000_20201001_000000.CPF'
+    }, 'QC7Mode': {'QC7Status': 'PASS', 'Mode': [
+            89
+        ]
+    }, 'QC8PointingError': {'QC8Status': 'PASS', 'PointingError': 9999
+    }
+}

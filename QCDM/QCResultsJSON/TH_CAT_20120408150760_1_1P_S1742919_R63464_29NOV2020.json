@@ -1,0 +1,49 @@
+{
+    "ProductName": "TH_CAT_20120408150760_1_1P_S1742919_R63464_29NOV2020",
+    "SATID": "TH1",
+    "Mode": "PAN",
+    "Level": "1A",
+    "Status": "PASS",
+    "FailedQC": [],
+    "QCProcessingTime(sec)": 5.471,
+    "QC1LostLine": {
+        "QC1Status": "PASS",
+        "AmountLostline": 0,
+        "LostlineNo.": []
+    },
+    "QC2IncidenceAngle": {
+        "QC2Status": "PASS",
+        "VIEWING_ANGLE_ALONG_TRACK": -0.819577,
+        "VIEWING_ANGLE_ACROSS_TRACK": 11.907991
+    },
+    "QC3ProductCompletion": {
+        "QC3Status": "PASS",
+        "MissingFile": [],
+        "ErrorFile": []
+    },
+    "QC4NoData": {
+        "QC4Status": "PASS",
+        "NoDataPixelPercentage": [
+            0.0
+        ]
+    },
+    "QC5CloudCoverage": {
+        "QC5Status": "PASS",
+        "CloudCoverPercentage": 9999
+    },
+    "QC6CPFCheck": {
+        "QC6Status": "PASS",
+        "UsedCPF_from_product": "THEOS_1_20200929_000000_20201001_000000.CPF",
+        "CPF_from_Store": "THEOS_1_20200929_000000_20201001_000000.CPF"
+    },
+    "QC7Mode": {
+        "QC7Status": "PASS",
+        "Mode": [
+            77
+        ]
+    },
+    "QC8PointingError": {
+        "QC8Status": "PASS",
+        "PointingError": 9999
+    }
+}
