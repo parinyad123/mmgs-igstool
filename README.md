@@ -1,9 +1,10 @@
 # IGS Tool — Satellite Imagery Quality Control Automation
 
-A Python pipeline that automates **quality control of satellite image products**. Each delivered
-product archive is checked against **configurable QC criteria** read from its **DIMAP metadata
-(XML)** and from the imagery itself (**OpenCV**). The product is then routed to
-**Pass / NotPass / Error** with a JSON report.
+A **batch data-quality pipeline** for satellite image products. It ingests each delivered product
+archive, extracts fields from its **DIMAP metadata (XML)**, computes image statistics with
+**OpenCV**, validates them against **configurable QC rules**, and routes the product to
+**Pass / NotPass / Error**. Each product gets a structured **JSON report**, exported to **CSV** for
+analysis.
 
 Built at **GISTDA** (Geo-Informatics and Space Technology Development Agency, Thailand), 2021–2022.
 Designed with the operators who had been doing these checks by hand. Published with my
@@ -51,6 +52,22 @@ METADATA.DIM (DIMAP XML)  +  IMAGERY.TIF (4 bands)
 
 Six of the eight criteria are active. Cloud coverage is switched off by default and pointing error
 is not implemented.
+
+## Data engineering highlights
+
+- **Batch ingestion.** Picks up every archive in the input folder, unzips it, processes it, cleans
+  up the working directory, and moves the archive to an output folder by result.
+- **Metadata extraction.** Parses DIMAP XML for scan-line, viewing-angle and calibration fields
+  instead of having an operator read them.
+- **Rule-based data validation.** Each product passes through independent checks with
+  configurable thresholds, the same idea as data-quality rules in an ETL pipeline. No ML is
+  involved.
+- **Structured, queryable output.** One JSON report per product with the measured value of every
+  criterion, flattened to a 25-column CSV. This is how the failure analysis below was possible:
+  pixel mode (QC07) failed most often, followed by calibration date (QC06) and incidence angle
+  (QC02).
+- **Built-in run metrics.** Processing time is recorded for every product, which is where the
+  4.9 s average comes from.
 
 ## Design decisions
 
